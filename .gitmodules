@@ -1,0 +1,10 @@
+[submodule "JsTypeHax"]
+	path = JsTypeHax
+	url = https://github.com/Crementif/JsTypeHax
+	branch = dumpling
+[submodule "JsTypeHax_payload"]
+	path = JsTypeHax_payload
+	url = https://github.com/Crementif/JsTypeHax_payload
+[submodule "CustomRPXLoader"]
+	path = CustomRPXLoader
+	url = https://github.com/Crementif/CustomRPXLoader
