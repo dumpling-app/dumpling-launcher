@@ -4,7 +4,12 @@ function setWarning(warningText) {
 }
 
 function launchExploit() {
-    window.location = "/exploit.html";
+    let paths = location.pathname.split("/");
+    if (paths[paths.length-1].trim().startsWith("index.") || paths[paths.length-1].trim() == "") {
+        paths.pop();
+    }
+    paths.push("exploit.html");
+    location.pathname = paths.join("/");
 }
 
 function checkCompatibility() {
