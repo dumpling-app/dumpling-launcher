@@ -10,6 +10,7 @@ rm -r dumpling.zip
 cd JsTypeHax
 php index.php > ./../dist/index.html
 php exploit.php > ./../dist/exploit.html
+php 404.php > ./../dist/404.html
 cp index.js ./../dist/index.js
 cp payload.elf ./../dist/payload.elf
 cd ..

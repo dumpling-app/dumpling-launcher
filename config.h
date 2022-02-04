@@ -1,4 +1,4 @@
 #pragma once
 
-#define CONFIG_PAYLOAD_URL "https://dumpling.pages.dev/payload.elf"
-#define CONFIG_RPX_URL "https://dumpling.pages.dev/dumpling.rpx"
+#define CONFIG_PAYLOAD_URL "http://payload.dumpling-wiiu.workers.dev"
+#define CONFIG_RPX_URL "http://dumpling.dumpling-wiiu.workers.dev"
