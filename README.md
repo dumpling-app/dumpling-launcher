@@ -41,5 +41,5 @@ All of the modifications were done in these repositories:
 5. Place the contents from the latest .zip at https://github.com/wiiu-env/wiiuhaxx_common/releases in the wiiuhaxx_common folder that's inside JsTypeHax.
 6. Customize the config.h file with URLs that'll be used to download the RPX and CustomRPXLauncher payload from, since it's currently all hardcoded at build time.
 7. Run `make` in the root folder to build the code550.bin and payload.elf, since those need to be hosted.
-8. Host the JsTypeHax folder on a PHP-enabled server and you'll have your exploit.
-9. You can then also save the html output of those pages if you want to host it as a static website (e.g. for Github Pages).
+8. Host the JsTypeHax folder on a PHP-enabled server and you'll be able to use your exploit.
+9. If you want to statically host it, you can use the `build-site.sh` script to build the payloads into the /dist folder.

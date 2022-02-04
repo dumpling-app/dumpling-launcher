@@ -1,4 +1,6 @@
 #!/bin/bash
+
+git pull --recurse-submodules
 mkdir dist -p
 
 wget -q https://github.com/emiyl/dumpling/releases/latest/download/dumpling.zip
