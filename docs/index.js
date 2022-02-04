@@ -4,12 +4,12 @@ function setWarning(warningText) {
 }
 
 function launchExploit() {
-    let paths = location.pathname.split("/");
-    if (paths[paths.length-1].trim().startsWith("index.") || paths[paths.length-1].trim() == "") {
+    var paths = window.location.pathname.split("/");
+    if (paths[paths.length-1].startsWith("index.") || paths[paths.length-1] == "") {
         paths.pop();
     }
     paths.push("exploit.html");
-    location.pathname = paths.join("/");
+    window.location.pathname = paths.join("/");
 }
 
 function checkCompatibility() {
@@ -27,7 +27,7 @@ function checkCompatibility() {
             return setWarning("Couldn't determine your Wii U's browser version!");
         }
         
-        if (userAgentDetails[2].startsWith("4.3.2") || userAgentDetails[2].startsWith("4.3.1") || userAgentDetails[2].startsWith("4.3.0")) {
+        if (userAgentDetails[2].substring(0, 5) == "4.3.2" || userAgentDetails[2].substring(0, 5) == "4.3.1" || userAgentDetails[2].substring(0, 5) == "4.3.0") {
             return launchExploit();
         }
         else {
