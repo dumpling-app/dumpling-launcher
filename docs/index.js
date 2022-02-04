@@ -5,7 +5,7 @@ function setWarning(warningText) {
 
 function launchExploit() {
     var paths = window.location.pathname.split("/");
-    if (paths[paths.length-1].startsWith("index.") || paths[paths.length-1] == "") {
+    if (paths[paths.length-1].substring(0, 6) == "index." || paths[paths.length-1] == "") {
         paths.pop();
     }
     paths.push("exploit.html");
