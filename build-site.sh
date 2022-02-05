@@ -1,16 +1,16 @@
 #!/bin/bash
 
-git pull --recurse-submodules
-mkdir dist -p
+git pull --recurse-submodules --no-rebase
+mkdir docs -p
 
 wget -q https://github.com/emiyl/dumpling/releases/latest/download/dumpling.zip
-unzip -p dumpling.zip wiiu/apps/dumpling/dumpling.rpx > ./dist/dumpling.rpx
+unzip -p dumpling.zip wiiu/apps/dumpling/dumpling.rpx > ./docs/dumpling.rpx
 rm -r dumpling.zip
 
 cd JsTypeHax
-php index.php > ./../dist/index.html
-php exploit.php > ./../dist/exploit.html
-php 404.php > ./../dist/404.html
-cp index.js ./../dist/index.js
-cp payload.elf ./../dist/payload.elf
+php index.php > ./../docs/index.html
+php exploit.php > ./../docs/exploit.html
+php 404.php > ./../docs/404.html
+cp index.js ./../docs/index.js
+cp payload.elf ./../docs/payload.elf
 cd ..

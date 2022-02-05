@@ -8,7 +8,7 @@ function launchExploit() {
     if (paths[paths.length-1].substring(0, 6) == "index." || paths[paths.length-1] == "") {
         paths.pop();
     }
-    paths.push("exploit.html");
+    paths.push(exploit_page);
     window.location.pathname = paths.join("/");
 }
 
