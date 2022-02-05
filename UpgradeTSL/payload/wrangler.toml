@@ -1,0 +1,8 @@
+name = "payload"
+type = "webpack"
+workers_dev = true
+webpack_config = "webpack.config.js"
+compatibility_date = "2022-02-05"
+
+[env.production]
+name = "production"
