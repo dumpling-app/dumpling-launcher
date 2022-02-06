@@ -3,9 +3,9 @@
 rm -r -f docs
 mkdir docs -p
 
-wget -q https://github.com/emiyl/dumpling/releases/latest/download/dumpling.zip
-unzip -p dumpling.zip wiiu/apps/dumpling/dumpling.rpx > ./docs/dumpling.rpx
-rm -r dumpling.zip
+#wget -q https://github.com/emiyl/dumpling/releases/latest/download/dumpling.zip
+#unzip -p dumpling.zip wiiu/apps/dumpling/dumpling.rpx > ./docs/dumpling.rpx
+#rm -r dumpling.zip
 
 cd JsTypeHax
 php index.php > ./../docs/index.html
