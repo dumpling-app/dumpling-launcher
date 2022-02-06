@@ -35,14 +35,15 @@ All of the modifications were done in these repositories:
 
 ### Building
 
-1. Install [devkitpro](https://devkitpro.org/wiki/Getting_Started).
+1. Install [devkitpro](https://devkitpro.org/wiki/Getting_Started) and install the wiiu-dev group packages.
 2. Install [wut](https://github.com/devkitPro/wut/#building-from-source) from source.
 3. Install ppc-portlibs in devkitpro's pacman using `(dkp-)pacman -Syu ppc-portlibs`.
-4. Clone this repository with all the submodules using `git clone --recurse-submodules https://github.com/Crementif/dumpling-web-launcher`.
+4. Clone this repository with all the submodules using `git clone --recurse-submodules https://github.com/Crementif/dumpling-launcher`.
 5. Place the contents from the latest .zip at https://github.com/wiiu-env/wiiuhaxx_common/releases in the wiiuhaxx_common folder that's inside JsTypeHax.
 6. Customize the config.h file with URLs that'll be used to download the RPX and CustomRPXLauncher payload from, since it's currently all hardcoded at build time.
 7. Run `make` to build the code550.bin and payload.elf.
-8. Host the JsTypeHax folder on a PHP-enabled server and you'll be able to use your exploit.
-9. To statically host it, you can use the `build-site.sh` script to build the payloads into the `/docs/` folder.
+8. Host the JsTypeHax folder on a PHP-enabled server and you'll be able to launch your given app.
 
-Most static site hosters force TLS 1.2+ by default if you don't use a custom domain, so in the `/UpgradeTSL/` folder there's some Cloudflare "workers" to upgrade our TSL 1.1 requests to Github pages, and retrieve the newest version of Dumpling.
+### Hosting
+
+Check [/Hosting/INSTRUCTIONS.md](/Hosting/INSTRUCTIONS.md) for more info about how to host this.
