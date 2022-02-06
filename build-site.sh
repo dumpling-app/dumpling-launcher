@@ -1,5 +1,6 @@
 #!/bin/bash
 
+rm -r -f docs
 mkdir docs -p
 
 wget -q https://github.com/emiyl/dumpling/releases/latest/download/dumpling.zip

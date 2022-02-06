@@ -1,10 +1,10 @@
 # Install devkitpro and dependencies
 wget -q https://github.com/devkitPro/pacman/releases/download/v1.0.2/devkitpro-pacman.amd64.deb
-apt-get -y install gdebi-core
-gdebi -n devkitpro-pacman.amd64.deb
-dkp-pacman -Syu
-dkp-pacman -S wiiu-dev --noconfirm
-dkp-pacman -S ppc-portlibs --noconfirm
+sudo apt-get -y install gdebi-core
+sudo gdebi -n devkitpro-pacman.amd64.deb
+sudo dkp-pacman -Syu
+sudo dkp-pacman -S wiiu-dev --noconfirm
+sudo dkp-pacman -S ppc-portlibs --noconfirm
 
 # Prepare environment
 export DEVKITPRO=/opt/devkitpro
@@ -12,6 +12,7 @@ export DEVKITARM=/opt/devkitpro/devkitARM
 export DEVKITPPC=/opt/devkitpro/devkitPPC
 git pull --recurse-submodules --no-rebase
 if [[ -z "${CF_PAGES}" ]]; then
+    ls
 else
     mv -f config-cloudflare.h config.h
 fi
@@ -19,9 +20,8 @@ fi
 # Build WUT
 git clone https://github.com/devkitPro/wut
 cd wut
-git reset --hard 31e97ecc65b813a14f77e4febbbdf9953372cddf
 make
-make install
+sudo make install
 cd ..
 
 # Prepare JsTypeHax
@@ -33,7 +33,7 @@ cd ..
 
 # Build JsTypeHax_payload
 cd JsTypeHax_payload
-apt-get -y install xxd
+sudo apt-get -y install xxd
 make
 cd ..
 
