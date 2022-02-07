@@ -8,7 +8,7 @@ Doesn't aim to replace the need for homebrewing your Wii U (which is very easy a
 
 ### How To Use
 
-You can use it on your Wii U by navigating to https://crementif.github.io/dumpling-launcher.
+You can use it on your Wii U by navigating to [dumplingapp.com](https://dumplingapp.com/).
 
 ### Sources
 
