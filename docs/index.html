@@ -1,9 +1,11 @@
 <!DOCTYPE html>
+<html lang="en">
     <header>
         <title>Dumpling Web Launcher</title>
         <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
         <meta http-equiv="Pragma" content="no-cache" />
         <meta http-equiv="Expires" content="0" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <script>var exploit_page = "exploit.html";</script>
         <script src="index.js"></script>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700&display=swap" rel="stylesheet">
@@ -13,6 +15,9 @@
             margin: auto 0;
             text-align: center;
             font-family: 'Roboto', sans-serif;
+            max-width: 90%;
+            margin-left: auto;
+            margin-right: auto
         }
 
         .headerContainer {
@@ -53,6 +58,19 @@
             width: 33%;
             padding: .2em 2em;
         }
+
+        .mobile {
+            display: none;
+        }
+
+        @media only screen and (max-width: 475px) {
+            .desktop {
+                display: none;
+            }
+            .mobile {
+                display: block;
+            }
+        }
     </style>
     <body onload="">
         <div id="name-header" class="headerContainer">
@@ -76,7 +94,7 @@
         
         <h3 style="margin-bottom: 1em;">Made possible by:</h3>
 
-        <table>
+        <table class="desktop">
             <tr>
                 <th>JsTypeHax</th>
                 <th>JsTypeHax_payload</th>
@@ -108,10 +126,27 @@
                 <td></td>
             </tr>
         </table>
+        
+        <table class="mobile">
+            <tr><th>JsTypeHax</th></tr>
+            <tr><td>JumpCallPop</td></tr>
+            <tr><td>jam1garner</td></tr>
+            <tr><td>hedgeberg</td></tr>
+            <tr><td>yellows8</td></tr>
+            <tr><th style="padding-top: .5em">JsTypeHax_payload</th></tr>
+            <tr><td>orboditilt</td></tr>
+            <tr><td>Marionumber1</td></tr>
+            <tr><td>dimok789</td></tr>
+            <tr><td>Kinnay</td></tr>
+            <tr><th style="padding-top: .5em">CustomRPXLoader</th></tr>
+            <tr><td>Maschell</td></tr>
+            <tr><td>orboditilt</td></tr>
+        </table>
 
         <div>
             <h3>Source code:</h3>
-            <b><a href="https://github.com/Crementif/dumpling-web-launcher" target="_blank">https://github.com/Crementif/dumpling-web-launcher</a></b>
+            <b><a href="https://github.com/emiyl/dumpling-launcher" target="_blank">https://github.com/emiyl/dumpling-launcher</a></b>
+            <p>Thank you to <a href="https://github.com/Crementif" target="_blank">@Crementif</a> for putting this together</p>
         </div>
     </body>
 </html>
