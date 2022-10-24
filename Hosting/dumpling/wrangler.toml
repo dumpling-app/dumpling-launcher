@@ -1,7 +1,6 @@
 name = "dumpling"
-type = "webpack"
+main = "index.js"
 workers_dev = true
-webpack_config = "webpack.config.js"
 compatibility_date = "2022-02-05"
 
 [env.production]
