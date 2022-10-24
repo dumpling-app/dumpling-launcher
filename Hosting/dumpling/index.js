@@ -4,8 +4,8 @@ async function handleRequest(request) {
     let response = await fetch("https://github.com/emiyl/dumpling/releases/latest/download/dumpling.zip", {
         cf: {
             // Always cache this fetch regardless of content type
-            // for a max of 5 seconds before revalidating the resource
-            cacheTtl: 60 * 4,
+            // for a max of 8 minutes before revalidating the resource
+            cacheTtl: 60 * 8,
             cacheEverything: true,
         },
     });
