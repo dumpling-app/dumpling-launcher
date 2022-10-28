@@ -1,6 +1,23 @@
 import JSZip from "./jszip.min.js";
 
 async function handleRequest(request) {
+    // Reconstruct the Response object to make its headers mutable.
+    response = new Response(await MIRROR.get("rpx", { type: "arrayBuffer" }), {
+        headers: {
+            "content-type": "text/html; charset=utf-8",
+            "Cache-Control": "max-age=20",
+            "Content-Disposition": "attachment; filename=dumpling.rpx"
+        }
+    });
+    return response;
+}
+
+addEventListener("fetch", event => {
+    event.respondWith(handleRequest(event.request));
+});
+
+
+async function mirrorPayloads(event) {
     let response = await fetch("https://github.com/emiyl/dumpling/releases/latest/download/dumpling.zip", {
         cf: {
             // Always cache this fetch regardless of content type
@@ -9,19 +26,16 @@ async function handleRequest(request) {
             cacheEverything: true,
         },
     });
+    if (response.status != 200) {
+        throw "When mirroring Github release, got "+response.status+" error, reason "+response.statusText;
+    }
 
     let zip = await JSZip.loadAsync(await response.arrayBuffer());
     let responseBinary = await zip.file("wiiu/apps/dumpling/dumpling.rpx").async("uint8array");
 
-    // Reconstruct the Response object to make its headers mutable.
-    response = new Response(responseBinary, response);
-
-    // Set cache control headers to cache on browser for 25 minutes
-    response.headers.set("Cache-Control", "max-age=20");
-    response.headers.set("Content-Disposition", "attachment; filename=dumpling.rpx");
-    return response;
+    await MIRROR.put("rpx", responseBinary);
 }
 
-addEventListener("fetch", event => {
-    return event.respondWith(handleRequest(event.request))
-})
+addEventListener("scheduled", event => {
+    event.waitUntil(mirrorPayloads(event));
+});

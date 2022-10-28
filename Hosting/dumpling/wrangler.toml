@@ -1,7 +1,0 @@
-name = "dumpling"
-main = "index.js"
-workers_dev = true
-compatibility_date = "2022-02-05"
-
-[env.production]
-name = "production"

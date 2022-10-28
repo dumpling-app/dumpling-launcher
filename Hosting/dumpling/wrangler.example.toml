@@ -1,0 +1,11 @@
+name = "dumpling"
+main = "index.js"
+workers_dev = true
+compatibility_date = "2022-02-05"
+
+kv_namespaces = [
+  { binding = "MIRROR", id = "npx wrangler kv:namespace create mirror", preview_id = "npx wrangler kv:namespace create mirror --dev" }
+]
+
+[env.production]
+name = "production"
