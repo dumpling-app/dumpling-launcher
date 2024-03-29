@@ -18,7 +18,7 @@ addEventListener("fetch", event => {
 
 
 async function mirrorPayloads(event) {
-    let response = await fetch("https://github.com/emiyl/dumpling/releases/latest/download/dumpling.zip", {
+    let response = await fetch("https://github.com/dumpling-app/dumpling/releases/latest/download/dumpling.zip", {
         cf: {
             // Always cache this fetch regardless of content type
             // for a max of 8 minutes before revalidating the resource

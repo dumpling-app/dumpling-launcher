@@ -1,7 +1,7 @@
 ## Dumpling Web Launcher
 
 ### Description
-Dumpling Web Launcher is used to launch [Dumpling](https://github.com/emiyl/dumpling), a Wii U homebrew application used for dumping Wii U games and files, without requiring an SD card or setting up any files.  
+Dumpling Web Launcher is used to launch [Dumpling](https://github.com/dumpling-app/dumpling), a Wii U homebrew application used for dumping Wii U games and files, without requiring an SD card or setting up any files.  
 
 Doesn't aim to replace the need for homebrewing your Wii U (which is very easy and safe) and Dumpling is still available through the normal methods.
 
@@ -38,7 +38,7 @@ All of the modifications were done in these repositories:
 1. Install [devkitpro](https://devkitpro.org/wiki/Getting_Started) and install the wiiu-dev group packages.
 2. Install [wut](https://github.com/devkitPro/wut/#building-from-source) from source.
 3. Install ppc-portlibs in devkitpro's pacman using `(dkp-)pacman -Syu ppc-portlibs`.
-4. Clone this repository with all the submodules using `git clone --recurse-submodules https://github.com/Crementif/dumpling-launcher`.
+4. Clone this repository with all the submodules using `git clone --recurse-submodules https://github.com/dumpling-app/dumpling-launcher`.
 5. Place the contents from the latest .zip at https://github.com/wiiu-env/wiiuhaxx_common/releases in the wiiuhaxx_common folder that's inside JsTypeHax.
 6. Customize the config.h file with URLs that'll be used to download the RPX and CustomRPXLauncher payload from, since it's currently all hardcoded at build time.
 7. Run `make` to build the code550.bin and payload.elf.

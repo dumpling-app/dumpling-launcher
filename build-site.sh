@@ -3,7 +3,7 @@
 rm -r -f docs
 mkdir docs -p
 
-#wget -q https://github.com/emiyl/dumpling/releases/latest/download/dumpling.zip
+#wget -q https://github.com/dumpling-app/dumpling/releases/latest/download/dumpling.zip
 #unzip -p dumpling.zip wiiu/apps/dumpling/dumpling.rpx > ./docs/dumpling.rpx
 #rm -r dumpling.zip
 
