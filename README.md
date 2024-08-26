@@ -46,4 +46,4 @@ All of the modifications were done in these repositories:
 
 ### Hosting
 
-Check [/Hosting/INSTRUCTIONS.md](/Hosting/INSTRUCTIONS.md) for more info about how to host this.
+Check [/Hosting/README.md](/Hosting/README.md) for more info about how to host this.
